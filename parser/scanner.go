@@ -14,8 +14,7 @@ type Scanner struct {
 	ch			rune		// 当前符号源
 }
 
-const zeroInput = -1
-const eofRune = -1
+
 
 func NewScanner (sen string) *Scanner {
 	runes := []rune(sen)
@@ -44,9 +43,4 @@ func (scan *Scanner) read() {
 
 func (scan *Scanner) isEnd() bool {
 	return scan.position >= scan.length
-}
-
-// 碰到空格就跳过，反之则解析
-func (scan *Scanner) skipBlankSpace() {
-	for !scan.isEnd() && unicode.IsSpace(scan.)
 }
